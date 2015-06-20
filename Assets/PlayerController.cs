@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour {
 
 		if (death_counter > max_death_counter)
 			Application.LoadLevel ("test");
-
 		
 		Vector3 z_axis_projection = Vector3.Project (oculus_cam.transform.forward, z_axis);
 		transform.position += new Vector3 (0, 0, z_axis_projection.z * Game_Logic_Controller.velocity * 1.5f);
@@ -43,6 +42,11 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision coll)
 	{
+		if (coll.gameObject.tag == "ground") {
+			print("ground");
+			GetComponent<Rigidbody>().AddForce(Vector3.up * 90);
+		}
+
 		if (coll.gameObject.tag != "obstacle" || death)
 			return;
 
