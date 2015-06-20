@@ -11,6 +11,7 @@ public class Game_Logic_Controller : MonoBehaviour {
 	public int incrementer = 1;
 	public int incrementer_counter = 0;
 	public int incrementer_counter_max = 60;
+	public int message_timer = 0;
 	public GameObject plane1;
 	public GameObject plane2;
 	public GameObject plane3;
@@ -27,12 +28,16 @@ public class Game_Logic_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		velocity = initial_velocity;
+		score_label.GetComponent<TextMesh>().text = "Chase the UFO!";
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
 		score ++;
-		score_label.GetComponent<TextMesh> ().text = score.ToString ();
+
+		message_timer ++;
+		if(message_timer > 240)
+			score_label.GetComponent<TextMesh> ().text = score.ToString ();
 
 		counter++;
 		if (counter == MAXCOUNTER) {
@@ -58,10 +63,10 @@ public class Game_Logic_Controller : MonoBehaviour {
 
 		plane1.transform.Translate (velocity, 0, 0);
 		plane2.transform.Translate (velocity, 0, 0);
-		plane3.transform.Translate (velocity, 0, 0);
-		plane4.transform.Translate (velocity, 0, 0);
-		wall1.transform.Translate (velocity, 0, 0);
-		wall2.transform.Translate (velocity, 0, 0);
+		//plane3.transform.Translate (velocity, 0, 0);
+		//plane4.transform.Translate (velocity, 0, 0);
+		//wall1.transform.Translate (velocity, 0, 0);
+		//wall2.transform.Translate (velocity, 0, 0);
 
 
 		if (Input.GetMouseButtonDown (0)) {
