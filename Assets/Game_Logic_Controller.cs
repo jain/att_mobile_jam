@@ -35,7 +35,7 @@ public class Game_Logic_Controller : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		score = score + (int) (20 * velocity); 
+		score = score + (int) (32 * velocity); 
 		if (frameCount > 200) {
 			score_label.GetComponent<TextMesh> ().text = (score).ToString ();
 		}
