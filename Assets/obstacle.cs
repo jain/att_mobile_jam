@@ -9,7 +9,7 @@ public class obstacle : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		transform.position += new Vector3 (Game_Logic_Controller.velocity, 0, 0);
 	}
 }
