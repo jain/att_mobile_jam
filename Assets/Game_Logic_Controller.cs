@@ -7,8 +7,8 @@ public class Game_Logic_Controller : MonoBehaviour {
 	public List<GameObject> list = new List<GameObject> ();
 	public float initial_velocity = 0.1f;
 
-	public static long frameCount = 0;
-	public static long score = 1; 
+	public long frameCount = 0;
+	public long score = 1; 
 
 	public static int SPAWN_INTERVAL = 32;
 	public static int INCREMENTER_COUNTER_MAX = 60;
