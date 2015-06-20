@@ -46,9 +46,10 @@ public class Game_Logic_Controller : MonoBehaviour {
 			}
 			for(int i = 0; i<incrementer; i++){
 				GameObject new_cube = Instantiate (cube_prefab, new Vector3 (-75, 142.9f, UnityEngine.Random.Range (-40, 40) + transform.position.z), Quaternion.identity) as GameObject;
-				new_cube.transform.localScale = Vector3.one * 2 + Random.insideUnitSphere * 7;
+				new_cube.transform.localScale = Vector3.one * 3 + Random.insideUnitSphere * 6;
 				new_cube.GetComponent<Renderer> ().material.color = new Color (Random.value, Random.value, Random.value, 1);
 				new_cube.GetComponent<Rigidbody>().AddForce(Random.insideUnitCircle * 100);
+				new_cube.GetComponent<Rigidbody>().AddTorque(Random.insideUnitCircle * 40);
 				list.Add (new_cube);
 			}
 
