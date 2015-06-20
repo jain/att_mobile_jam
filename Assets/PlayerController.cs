@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey (KeyCode.DownArrow))
 			transform.Translate (new Vector3 (velocity, 0, 0));
 		else if (Input.GetKey (KeyCode.RightArrow))
-			transform.Translate (n	ew Vector3 (0, 0, velocity));
+			transform.Translate (new Vector3 (0, 0, velocity));
 		else if (Input.GetKey (KeyCode.LeftArrow))
 			transform.Translate (new Vector3 (0, 0, -velocity));
 		else if (Input.GetKey (KeyCode.UpArrow))
