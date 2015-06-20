@@ -22,7 +22,7 @@ public class Game_Logic_Controller : MonoBehaviour {
 		if (counter == MAXCOUNTER) {
 			//velocity*=1.01f;
 			//for(int i = 0; i<incrementer; i++){
-			GameObject new_cube = Instantiate (cube_prefab, new Vector3 (-20, 0, UnityEngine.Random.Range (-20, 20)), Quaternion.identity) as GameObject;
+			GameObject new_cube = Instantiate (cube_prefab, new Vector3 (-50, 0, UnityEngine.Random.Range (-20, 20) + transform.position.z), Quaternion.identity) as GameObject;
 			new_cube.GetComponent<Renderer> ().material.color = new Color (Random.value, Random.value, Random.value, 1);
 			list.Add (new_cube);
 			//}
