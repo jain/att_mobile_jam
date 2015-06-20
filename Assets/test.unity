@@ -138,11 +138,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 107885911}
   - 33: {fileID: 107885910}
-  - 64: {fileID: 107885909}
   - 23: {fileID: 107885908}
+  - 65: {fileID: 107885909}
   m_Layer: 0
   m_Name: plane1
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,8 +171,8 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &107885909
-MeshCollider:
+--- !u!65 &107885909
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -181,8 +181,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.22044605e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &107885910
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -214,6 +214,48 @@ Skybox:
   m_GameObject: {fileID: 133176372}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 93d43b027dc267444af7412b8e607dbd, type: 2}
+--- !u!1001 &215919631
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -26.6900005
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.38999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 435784, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &391838925
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +280,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391838925}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -312,7 +354,7 @@ GameObject:
   - 23: {fileID: 1088153858}
   m_Layer: 0
   m_Name: plane2
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +482,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1684481334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -539,6 +581,14 @@ Prefab:
     - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+      propertyPath: far clip plane
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000002, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+      propertyPath: far clip plane
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
@@ -778,7 +828,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975892504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.55999994, y: -5.19999981, z: 12.8100004}
+  m_LocalPosition: {x: .5, y: -3.43000007, z: 12.8000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1779290572}
