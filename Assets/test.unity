@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogColor: {r: .441176474, g: .953752518, b: 1, a: 1}
   m_FogMode: 3
   m_FogDensity: 0
   m_LinearFogStart: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube_prefab: {fileID: 146336, guid: 88268d35521e740a087c4e34ca42dc35, type: 2}
-  velocity: .0500000007
+  velocity: .100000001
   counter: 1
   MAXCOUNTER: 5
   incrementer: 1
@@ -758,7 +758,7 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
 --- !u!23 &1975892506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975892504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.2900009, y: 14.8800001, z: 12.8100004}
+  m_LocalPosition: {x: -1.55999994, y: -5.19999981, z: 12.8100004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1779290572}
@@ -880,7 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529d6e387e22f4b5ca61360505e579c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: .0500000007
+  velocity: .100000001
   oculus_cam: {fileID: 2102804447}
   z_axis: {x: 0, y: 0, z: 0}
 --- !u!54 &2019880353
