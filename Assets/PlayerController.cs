@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour {
 	public int death_counter = 0;
 	public int max_death_counter = 180;
 
+	public static int shot_cooldown = 0;
+
+	public GameObject shot_prefab;
+
 	// Use this for initialization
 	void Start () {
 		z_axis = new Vector3 (0, 0, 1);
@@ -17,6 +21,8 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		shot_cooldown ++;
+
 		if (death)
 			death_counter ++;
 
@@ -25,6 +31,12 @@ public class PlayerController : MonoBehaviour {
 		
 		Vector3 z_axis_projection = Vector3.Project (oculus_cam.transform.forward, z_axis);
 		transform.position += new Vector3 (0, 0, z_axis_projection.z * Game_Logic_Controller.velocity * 1.5f);
+
+		if (Input.GetMouseButtonDown (0) && shot_cooldown > 120) {
+			GameObject shot = Instantiate (shot_prefab, transform.position, Quaternion.identity) as GameObject;
+			shot.GetComponent<Rigidbody>().velocity = oculus_cam.transform.forward * 15;
+			shot_cooldown = 0;
+		}
 	}
 
 	// Update is called once per frame

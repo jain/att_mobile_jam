@@ -40,6 +40,8 @@ public class Game_Logic_Controller : MonoBehaviour {
 		score = score + (int) (32 * velocity); 
 		if (frameCount > 200) {
 			score_label.GetComponent<TextMesh> ().text = (score).ToString ();
+			if(PlayerController.shot_cooldown > 120)
+				score_label.GetComponent<TextMesh> ().text = "SHOT READY!";
 		}
 
 		if (frameCount == 100) {
@@ -77,7 +79,7 @@ public class Game_Logic_Controller : MonoBehaviour {
 		//wall2.transform.Translate (velocity, 0, 0);
 		
 		
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (1)) {
 			Application.LoadLevel("test");
 		}
 		

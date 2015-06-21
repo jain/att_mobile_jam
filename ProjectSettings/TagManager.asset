@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - obstacle
+  - shot
   layers:
   - Default
   - TransparentFX

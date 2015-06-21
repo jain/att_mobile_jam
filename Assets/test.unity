@@ -585,23 +585,18 @@ MonoBehaviour:
   cube_prefab: {fileID: 146336, guid: 88268d35521e740a087c4e34ca42dc35, type: 2}
   list: []
   initial_velocity: .100000001
-  counter: 0
-  MAXCOUNTER: 30
+  frameCount: 0
+  score: 0
   incrementer: 1
   incrementer_counter: 0
-  incrementer_counter_max: 60
-  message_timer: 0
   plane1: {fileID: 1088153857}
   plane2: {fileID: 107885907}
   plane3: {fileID: 0}
   plane4: {fileID: 0}
   wall1: {fileID: 1684481334}
   wall2: {fileID: 391838925}
-  score_label: {fileID: 1975892504}
-  score: 0
-  whale_drop: 0
-  whale_drop_counter: 0
   whale_prefab: {fileID: 171512, guid: 4df1da8cd9ad34c1f840a004621542b9, type: 2}
+  score_label: {fileID: 1975892504}
 --- !u!4 &1779290572 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
@@ -914,6 +909,7 @@ MonoBehaviour:
   death: 0
   death_counter: 0
   max_death_counter: 180
+  shot_prefab: {fileID: 129328, guid: db761d0e553b7439dbf36c6dbd0cb939, type: 2}
 --- !u!54 &2019880353
 Rigidbody:
   m_ObjectHideFlags: 0
